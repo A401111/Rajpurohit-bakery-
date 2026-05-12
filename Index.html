@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Rajput Bakery | Fresh Cakes & Bakery in Savantavati</title>
+
+  <meta name="description"
+    content="Rajput Bakery in Savantavati offers fresh breads, cakes, pastries, birthday cakes, and custom bakery orders. Order online or contact us on WhatsApp.">
+
+  <meta name="keywords"
+    content="Rajput Bakery, Savantavati Bakery, Cakes, Bread, Birthday Cake, Bakery Near Me">
+
+  <meta name="author" content="Rajput Bakery">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#fff8f0;
+      color:#333;
+      line-height:1.6;
+    }
+
+    /* HEADER */
+
+    header{
+      background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url('https://images.unsplash.com/photo-1509440159596-0249088772ff');
+      background-size:cover;
+      background-position:center;
+      color:white;
+      text-align:center;
+      padding:90px 20px;
+    }
+
+    .logo{
+      width:100px;
+      height:100px;
+      background:white;
+      color:#8b4513;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:bold;
+      margin:auto;
+      margin-bottom:20px;
+      font-size:22px;
+    }
+
+    header h1{
+      font-size:48px;
+      margin-bottom:10px;
+    }
+
+    header p{
+      font-size:18px;
+    }
+
+    /* NAVBAR */
+
+    nav{
+      background:#5c2e0f;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      padding:15px;
+      text-align:center;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin:0 15px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#ffd700;
+    }
+
+    section{
+      padding:60px 20px;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    h2{
+      text-align:center;
+      color:#8b4513;
+      margin-bottom:40px;
+      font-size:35px;
+    }
+
+    /* GALLERY */
+
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+
+    .gallery img{
+      width:100%;
+      height:250px;
+      object-fit:cover;
+      border-radius:12px;
+      transition:0.3s;
+    }
+
+    .gallery img:hover{
+      transform:scale(1.03);
+    }
+
+    /* MENU */
+
+    .menu-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .menu-item{
+      background:white;
+      padding:25px;
+      border-radius:12px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .menu-item:hover{
+      transform:translateY(-5px);
+    }
+
+    .menu-item h3{
+      color:#8b4513;
+      margin-bottom:10px;
+    }
+
+    .price{
+      color:#e67e22;
+      font-size:20px;
+      font-weight:bold;
+      margin-top:10px;
+    }
+
+    /* REVIEWS */
+
+    .reviews{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
+    }
+
+    .review{
+      background:white;
+      padding:25px;
+      border-radius:12px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+      border-left:5px solid #8b4513;
+    }
+
+    .review strong{
+      display:block;
+      margin-top:15px;
+      color:#8b4513;
+    }
+
+    /* CONTACT */
+
+    .contact-box{
+      background:white;
+      padding:30px;
+      border-radius:12px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+      text-align:center;
+    }
+
+    .contact-box p{
+      margin:15px 0;
+      font-size:18px;
+    }
+
+    /* ORDER FORM */
+
+    form{
+      background:white;
+      padding:35px;
+      border-radius:12px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    form input,
+    form textarea,
+    form select{
+      width:100%;
+      padding:15px;
+      margin-bottom:20px;
+      border:1px solid #ccc;
+      border-radius:8px;
+      font-size:16px;
+    }
+
+    form button{
+      width:100%;
+      padding:15px;
+      background:#8b4513;
+      color:white;
+      border:none;
+      border-radius:8px;
+      font-size:18px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    form button:hover{
+      background:#6d3410;
+    }
+
+    /* MAP */
+
+    iframe{
+      width:100%;
+      border:none;
+      border-radius:12px;
+      margin-top:25px;
+    }
+
+    /* WHATSAPP BUTTON */
+
+    .whatsapp{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#25d366;
+      color:white;
+      padding:15px 18px;
+      border-radius:50px;
+      text-decoration:none;
+      font-size:18px;
+      font-weight:bold;
+      box-shadow:0 5px 15px rgba(0,0,0,0.2);
+      z-index:999;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#5c2e0f;
+      color:white;
+      text-align:center;
+      padding:20px;
+      margin-top:40px;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:768px){
+
+      header{
+        padding:70px 20px;
+      }
+
+      header h1{
+        font-size:34px;
+      }
+
+      nav a{
+        display:block;
+        margin:10px 0;
+      }
+
+      h2{
+        font-size:28px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- WHATSAPP -->
+
+  <a class="whatsapp"
+     href="https://wa.me/919876543210"
+     target="_blank">
+     WhatsApp
+  </a>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="logo">RB</div>
+
+    <h1>Rajput Bakery</h1>
+
+    <p>Fresh Bread • Delicious Cakes • Sweet Memories</p>
+
+  </header>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+
+    <a href="#gallery">Gallery</a>
+
+    <a href="#menu">Menu</a>
+
+    <a href="#reviews">Reviews</a>
+
+    <a href="#contact">Contact</a>
+
+    <a href="#order">Order</a>
+
+  </nav>
+
+  <!-- GALLERY -->
+
+  <section id="gallery">
+
+    <h2>Our Bakery Specials</h2>
+
+    <div class="gallery">
+
+      <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff">
+
+      <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587">
+
+      <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec">
+
+      <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c">
+
+    </div>
+
+  </section>
+
+  <!-- MENU -->
+
+  <section id="menu">
+
+    <h2>Our Menu</h2>
+
+    <div class="menu-container">
+
+      <div class="menu-item">
+        <h3>Fresh Bread</h3>
+        <p>Soft freshly baked bread every day.</p>
+        <div class="price">₹40</div>
+      </div>
+
+      <div class="menu-item">
+        <h3>Chocolate Cake</h3>
+        <p>Rich chocolate cake for celebrations.</p>
+        <div class="price">₹450</div>
+      </div>
+
+      <div class="menu-item">
+        <h3>Birthday Cake</h3>
+        <p>Custom birthday cakes available.</p>
+        <div class="price">₹700 onwards</div>
+      </div>
+
+      <div class="menu-item">
+        <h3>Puffs & Snacks</h3>
+        <p>Veg puffs and cheese snacks.</p>
+        <div class="price">₹25</div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- REVIEWS -->
+
+  <section id="reviews">
+
+    <h2>Customer Reviews</h2>
+
+    <div class="reviews">
+
+      <div class="review">
+        <p>"Best bakery in Savantavati. Fresh and tasty cakes!"</p>
+        <strong>- Rahul Patil</strong>
+      </div>
+
+      <div class="review">
+        <p>"Amazing custom cakes and fast service."</p>
+        <strong>- Sneha Joshi</strong>
+      </div>
+
+      <div class="review">
+        <p>"Fresh bread every morning. Highly recommended."</p>
+        <strong>- Amit Desai</strong>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section id="contact">
+
+    <h2>Location & Contact</h2>
+
+    <div class="contact-box">
+
+      <p><strong>Address:</strong> Main Market Road, Savantavati, Maharashtra</p>
+
+      <p><strong>Phone:</strong> +91 98765 43210</p>
+
+      <p><strong>Email:</strong> rajputbakery@gmail.com</p>
+
+      <p><strong>Open:</strong> 7:00 AM - 10:00 PM</p>
+
+      <!-- GOOGLE MAP -->
+
+      <iframe
+        src="https://www.google.com/maps?q=Sawantwadi%20Maharashtra&output=embed"
+        height="350"
+        loading="lazy">
+      </iframe>
+
+    </div>
+
+  </section>
+
+  <!-- ORDER -->
+
+  <section id="order">
+
+    <h2>Place Your Order</h2>
+
+    <!-- FORMSPREE EMAIL FORM -->
+
+    <form action="https://formspree.io/f/yourformid" method="POST">
+
+      <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        required>
+
+      <input
+        type="tel"
+        name="phone"
+        placeholder="Phone Number"
+        required>
+
+      <select name="item" required>
+
+        <option value="">Select Item</option>
+
+        <option>Bread</option>
+
+        <option>Chocolate Cake</option>
+
+        <option>Birthday Cake</option>
+
+        <option>Custom Cake</option>
+
+      </select>
+
+      <textarea
+        name="message"
+        rows="5"
+        placeholder="Write your order details or custom cake request">
+      </textarea>
+
+      <button type="submit">Submit Order</button>
+
+    </form>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>© 2026 Rajput Bakery | Savantavati</p>
+
+  </footer>
+
+</body>
+</html>
